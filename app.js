@@ -6,10 +6,10 @@ $(document).ready(function() {
   //Create New HTML Elements
 
   //Main Elements
-  var $title = $('<h1>Twiddler</h1>');
+  var $title = $('<h1>TWIDDLER</h1>');
   var $updateButton = $('<button id="update-feed">Update Feed</button>');
   var $tweetFeed = $('<div id="feed"></div>');
-  var $friendsBox = $('<div id="friendsHome">Friends List</div>');
+  var $friendsBox = $('<div id="friends-home">Friends List</div>');
   var $friendsList = $('<ul id="friends"></ul>');
   var $friend = $('<li class="friend"></li>');
   var $tweet = $('<div class="tweet"></div>');
@@ -42,7 +42,7 @@ $(document).ready(function() {
       var currentTweet = tweet[tweetIndex];
       $profilePhoto.attr('src', currentTweet.profilePhotoURL);
       $username.text('@' + currentTweet.user);
-      $timestamp.text(jQuery.timeago(currentTweet.createdAt));
+      $timestamp.text(' ' + jQuery.timeago(currentTweet.createdAt));
       $message.text(currentTweet.message);
 
       //Create tweet UI of current tweet
